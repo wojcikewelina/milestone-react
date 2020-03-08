@@ -5,10 +5,11 @@ header {
  header button{
    height: 100%;
    border-radius: 8px;
-   font-weight:  bold;
   width: 70px;
   overflow: hidden;
   border-style: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
  }
 
  header button:hover{
