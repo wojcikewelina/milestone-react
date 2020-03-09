@@ -16,6 +16,8 @@ class NavigationBar extends Component {
     event.target.setAttribute("class", `nav-button active-button`);
   }
 
+ 
+
   render() {
     return (
       <header>

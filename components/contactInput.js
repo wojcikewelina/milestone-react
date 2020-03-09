@@ -8,7 +8,11 @@ export default class ContactInput extends Component{
     const {
       innerPlaceholder,
       inputClassName,
+      updateState,
+      updateState,
+      startValue
     } = this.props;
-    return <input className= {this.props.inputClassName} type="text" placeholder={this.props.innerPlaceholder} value = {this.props.startText}/>
+    return <input className= {inputClassName} type="text" placeholder={innerPlaceholder} onChange={updateState}
+    value={startValue}/>
   }
 }
