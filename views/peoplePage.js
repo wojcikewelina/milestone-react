@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PersonCard from "../components/personCard";
 import { getAllPeople } from "../services/peopleAPI";
+import LoadingPage from "../components/loadingPage";
+import { Link } from "react-router-dom";
 
 class PeoplePage extends Component {
   constructor(props) {
@@ -14,19 +16,18 @@ class PeoplePage extends Component {
   }
 
   render() {
-    const { imageSource, name, jobTitle } = this.props;
+    const { imageSource, name, jobTitle, hrefToPersonID } = this.props;
 
     if (this.state.allPeopleArrey.length === 0) {
       return (
-        <div id="loadingDiv">
-          <img src="https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif" />
-        </div>
+        <LoadingPage/>
       );
     }
 
     const allComponents = this.state.allPeopleArrey.map(person => {
       return (
         <PersonCard
+        hrefToPersonID={person.id}
           imageSource={person.picture}
           name={person.firstName + " " + person.lastName}
           jobTitle={person.position}

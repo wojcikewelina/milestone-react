@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 
-export default class ContactInput extends Component {
+export default class ContactTextArea extends Component {
   render() {
-    const { innerPlaceholder, inputClassName, updateState } = this.props;
+    const { innerPlaceholder, updateState, inputClassName, startValue } = this.props;
+
     return (
-      <input
+      <textarea
         className={inputClassName}
-        type="text"
         placeholder={innerPlaceholder}
         onChange={updateState}
+        value={startValue}
       />
     );
   }

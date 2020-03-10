@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ContactInput from "../components/contactInput";
+import ContactTextArea from "../components/contactTextArea";
 
 let allImputs;
 
@@ -49,12 +50,8 @@ class ContactPage extends Component {
     });
   };
 
-  handleSubmit = event => {
+  sendDataOnClick = (event) => {
     event.preventDefault();
-    console.log(this.state);
-  };
-
-  sendDataOnClick = () => {
     const arreyOfData = [
       "Your Name: " + this.state.name,
       "Your email: " + this.state.email,
@@ -65,8 +62,8 @@ class ContactPage extends Component {
 
     console.log(arreyOfData);
 
-    for (var i=0; i<allImputs.length;i++){
-      allImputs[i].value=""
+    for (var i = 0; i < allImputs.length; i++) {
+      allImputs[i].value = "";
     }
   };
 
@@ -77,7 +74,7 @@ class ContactPage extends Component {
       <div id="contactPageDiv">
         <div id="contact-form-div">
           <h1>Contact Form</h1>
-          <form onSubmit={this.handlesubmit}>
+          <form>
             <ContactInput
               inputClassName="contact-input all-input"
               innerPlaceholder="Your name"
@@ -98,16 +95,20 @@ class ContactPage extends Component {
               innerPlaceholder="Your Web Site"
               updateState={this.onWebSiteChange}
             />
-            <ContactInput
+            <ContactTextArea
               inputClassName="contactStartTextInput all-input"
               innerPlaceholder="Type your message here"
               updateState={this.onRandomTextChange}
-              startValue ={this.state.randomMessege}
+              startValue={this.state.randomMessege}
+            />
+
+            <input
+              type="submit"
+              onClick={this.sendDataOnClick}
+              id="contactSubmitButton"
+              value="Submit"
             />
           </form>
-          <button onClick={this.sendDataOnClick} id="contactSubmitButton">
-            Submit!
-          </button>
         </div>
       </div>
     );
