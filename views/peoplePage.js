@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PersonCard from "../components/personCard";
 import { getAllPeople } from "../services/peopleAPI";
 import LoadingPage from "../components/loadingPage";
-import { Link } from "react-router-dom";
+
 
 class PeoplePage extends Component {
   constructor(props) {
