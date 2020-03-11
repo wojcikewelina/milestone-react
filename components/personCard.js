@@ -12,7 +12,7 @@ export default class PersonCard extends Component {
     } = this.props;
 
     return (
-      <Link className="link-to-person" to={"/people/" + hrefToPersonID}>
+     <Link className="link-to-person" to={"/person/" + hrefToPersonID}>
         <div className="person-card-div" onClick={showDetailPage}>
           <img className="person-img" src={imageSource} />
           <div className="person-text-div">

@@ -8,6 +8,7 @@ import NavigationBar from "./components/navigationBar";
 import PeoplePage from "./views/peoplePage";
 import HomePage from "./views/homePage";
 import ContactPage from "./views/contactPage";
+import PersonDetails from "./views/personDetails";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route exact path="/" component={HomePage} />
             <Route path="/people" component={PeoplePage} />
             <Route path="/contact" component={ContactPage} />
+             <Route path={"/person/:id"} component={PersonDetails} />
           </Switch>
         </BrowserRouter>
       </div>
