@@ -12,6 +12,7 @@ class PeoplePage extends Component {
   componentDidMount() {
     getAllPeople().then(people => {
       this.setState({ allPeopleArrey: people });
+      console.log(people)
     });
   }
 
