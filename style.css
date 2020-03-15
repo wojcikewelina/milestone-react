@@ -180,3 +180,38 @@ box-shadow: 2px 2px 10px 1px #888888
   text-decoration: none;
   color: black;
 }
+
+/* Person Details */
+
+.personDetailsWholeDiv{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    width: 40%;
+box-shadow: 0px 2px 8px #888888;
+  }
+
+  .personDetailsPicture {
+    display: flex;
+    justify-content: center;
+    margin: 20px
+  }
+  
+  .personDetailsData {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin: 20px;
+  }
+
+.text-capitalization{
+     text-transform:capitalize;
+
+}
+
+  .personDetailsData div {
+    margin: 3px;
+  }

@@ -1,50 +1,46 @@
 import React, { Component } from "react";
+import { getPerson } from "../services/peopleAPI";
 
 class PersonDetails extends Component {
   render() {
-    const {
-      imageSource,
-      name,
-      jobTitle,
-      showDetailPage,
-      hrefToPersonID,
-      lastName,
-      gender,
-      mobile,
-      email
-    } = this.props;
+    const personId = this.props.match.params.id;
+    const person = getPerson(personId);
+    console.log(person);
 
     return (
-      <div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ9Aa-An0VUAPjsGL3-3ClaTulsiAVhMNkufxXjxw15hiwwj4yu" />
-        <div>
-          <span>position: </span>
-          <strong>{jobTitle}</strong>
+      <div className = "personDetailsWholeDiv">
+        <div className="personDetailsPicture">
+          <img src={person.picture} />
         </div>
-        <div>
-          <span>first name: </span>
-          <strong>{name}</strong>
-        </div>
-        <div>
-          <span>last name: </span>
-          <strong>{lastName}</strong>
-        </div>
-        <div>
-          <span>gender: </span>
-          <strong>{gender}</strong>
-        </div>
-        <div>
-          <span>id: </span>
-          <strong />
-          {hrefToPersonID}
-        </div>
-        <div>
-          <span>mobile: </span>
-          <strong>{mobile}</strong>
-        </div>
-        <div>
-          <span>email: </span>
-          <strong >{email}</strong>
+        <div className = "personDetailsData">
+          <div>
+            <span >position: </span>
+            <strong className="text-capitalization">{person.position}</strong>
+          </div>
+          <div >
+            <span>first name: </span>
+            <strong className="text-capitalization">{person.firstName}</strong>
+          </div>
+          <div>
+            <span >last name: </span>
+            <strong className="text-capitalization">{person.lastName}</strong>
+          </div>
+          <div>
+            <span>gender: </span>
+            <strong>{person.gender}</strong>
+          </div>
+          <div>
+            <span>id: </span>
+            <strong>{person.id}</strong>
+          </div>
+          <div>
+            <span>mobile: </span>
+            <strong>{person.mobile}</strong>
+          </div>
+          <div>
+            <span>email: </span>
+            <strong>{person.email}</strong>
+          </div>
         </div>
       </div>
     );

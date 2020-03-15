@@ -22,7 +22,7 @@ class PeoplePage extends Component {
     if (this.state.allPeopleArrey.length === 0) {
       return (
         <LoadingPage/>
-      );
+            );
     }
 
     const allComponents = this.state.allPeopleArrey.map(person => {
