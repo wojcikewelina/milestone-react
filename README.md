@@ -1,12 +1,12 @@
-# Project name
+# Project Name
 
 People Page - React Milestone
 
 # Description
 
-Project created during programming course. React Milestone. 
+Project created during programming course. 
 
 # milestone-react
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/milestone-react)
+[Edit or run on StackBlitz ⚡️](https://stackblitz.com/edit/milestone-react)
 
