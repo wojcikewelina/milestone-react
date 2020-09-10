@@ -17,9 +17,7 @@ class PeoplePage extends Component {
   }
 
   render() {
-    const { imageSource, name, jobTitle, hrefToPersonID } = this.props;
-
-    if (this.state.allPeopleArrey.length === 0) {
+     if (this.state.allPeopleArrey.length === 0) {
       return (
         <LoadingPage/>
             );
@@ -37,7 +35,7 @@ class PeoplePage extends Component {
       );
     });
 
-    return <div id="peoplePageDiv">{allComponents}</div>;
+    return <div className="people-page-div">{allComponents}</div>;
   }
 }
 
